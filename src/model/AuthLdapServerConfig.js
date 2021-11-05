@@ -77,6 +77,9 @@ export default class AuthLdapServerConfig {
             if (data.hasOwnProperty('BindPW')) {
                 obj['BindPW'] = ApiClient.convertToType(data['BindPW'], 'String');
             }
+            if (data.hasOwnProperty('BindAnonymous')) {
+                obj['BindAnonymous'] = ApiClient.convertToType(data['BindAnonymous'], 'Boolean');
+            }
             if (data.hasOwnProperty('SkipVerifyCertificate')) {
                 obj['SkipVerifyCertificate'] = ApiClient.convertToType(data['SkipVerifyCertificate'], 'Boolean');
             }
@@ -107,6 +110,9 @@ export default class AuthLdapServerConfig {
             if (data.hasOwnProperty('SchedulerDetails')) {
                 obj['SchedulerDetails'] = ApiClient.convertToType(data['SchedulerDetails'], 'String');
             }
+            if (data.hasOwnProperty('SyncOnly')) {
+                obj['SyncOnly'] = ApiClient.convertToType(data['SyncOnly'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -135,6 +141,10 @@ export default class AuthLdapServerConfig {
     * @member {String} BindPW
     */
     BindPW = undefined;
+    /**
+    * @member {Boolean} BindAnonymous
+    */
+    BindAnonymous = undefined;
     /**
     * @member {Boolean} SkipVerifyCertificate
     */
@@ -175,6 +185,10 @@ export default class AuthLdapServerConfig {
     * @member {String} SchedulerDetails
     */
     SchedulerDetails = undefined;
+    /**
+    * @member {Boolean} SyncOnly
+    */
+    SyncOnly = undefined;
 
 
 
