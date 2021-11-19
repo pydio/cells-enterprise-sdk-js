@@ -65,6 +65,15 @@ export default class AuthOAuth2MappingRule {
             if (data.hasOwnProperty('RightAttribute')) {
                 obj['RightAttribute'] = ApiClient.convertToType(data['RightAttribute'], 'String');
             }
+            if (data.hasOwnProperty('LeftSplit')) {
+                obj['LeftSplit'] = ApiClient.convertToType(data['LeftSplit'], 'String');
+            }
+            if (data.hasOwnProperty('RightValueTemplate')) {
+                obj['RightValueTemplate'] = ApiClient.convertToType(data['RightValueTemplate'], 'String');
+            }
+            if (data.hasOwnProperty('NoUpdate')) {
+                obj['NoUpdate'] = ApiClient.convertToType(data['NoUpdate'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -81,6 +90,18 @@ export default class AuthOAuth2MappingRule {
     * @member {String} RightAttribute
     */
     RightAttribute = undefined;
+    /**
+    * @member {String} LeftSplit
+    */
+    LeftSplit = undefined;
+    /**
+    * @member {String} RightValueTemplate
+    */
+    RightValueTemplate = undefined;
+    /**
+    * @member {Boolean} NoUpdate
+    */
+    NoUpdate = undefined;
 
 
 
