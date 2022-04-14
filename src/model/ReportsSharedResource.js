@@ -55,6 +55,9 @@ class ReportsSharedResource {
             if (data.hasOwnProperty('Node')) {
                 obj['Node'] = TreeNode.constructFromObject(data['Node']);
             }
+            if (data.hasOwnProperty('ReportDate')) {
+                obj['ReportDate'] = ApiClient.convertToType(data['ReportDate'], 'Number');
+            }
             if (data.hasOwnProperty('Workspaces')) {
                 obj['Workspaces'] = ApiClient.convertToType(data['Workspaces'], [ReportsAuditedWorkspace]);
             }
@@ -74,6 +77,11 @@ ReportsSharedResource.prototype['ChildrenSharedResources'] = undefined;
  * @member {module:model/TreeNode} Node
  */
 ReportsSharedResource.prototype['Node'] = undefined;
+
+/**
+ * @member {Number} ReportDate
+ */
+ReportsSharedResource.prototype['ReportDate'] = undefined;
 
 /**
  * @member {Array.<module:model/ReportsAuditedWorkspace>} Workspaces

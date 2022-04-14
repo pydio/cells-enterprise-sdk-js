@@ -145,6 +145,7 @@ import ObjectEncryptionMode from './model/ObjectEncryptionMode';
 import ObjectStorageType from './model/ObjectStorageType';
 import ProtobufAny from './model/ProtobufAny';
 import ReportsAuditedWorkspace from './model/ReportsAuditedWorkspace';
+import ReportsListReportsResponse from './model/ReportsListReportsResponse';
 import ReportsSharedResource from './model/ReportsSharedResource';
 import ReportsSharedResourceShareType from './model/ReportsSharedResourceShareType';
 import ReportsSharedResourcesRequest from './model/ReportsSharedResourcesRequest';
@@ -1009,6 +1010,12 @@ export {
      * @property {module:model/ReportsAuditedWorkspace}
      */
     ReportsAuditedWorkspace,
+
+    /**
+     * The ReportsListReportsResponse model constructor.
+     * @property {module:model/ReportsListReportsResponse}
+     */
+    ReportsListReportsResponse,
 
     /**
      * The ReportsSharedResource model constructor.

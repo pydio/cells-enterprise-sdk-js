@@ -70,6 +70,9 @@ class ReportsSharedResourcesRequest {
             if (data.hasOwnProperty('OwnerUUID')) {
                 obj['OwnerUUID'] = ApiClient.convertToType(data['OwnerUUID'], 'String');
             }
+            if (data.hasOwnProperty('ReportDate')) {
+                obj['ReportDate'] = ApiClient.convertToType(data['ReportDate'], 'Number');
+            }
             if (data.hasOwnProperty('RolesReadAND')) {
                 obj['RolesReadAND'] = ApiClient.convertToType(data['RolesReadAND'], 'Boolean');
             }
@@ -129,6 +132,11 @@ ReportsSharedResourcesRequest.prototype['Offset'] = undefined;
  * @member {String} OwnerUUID
  */
 ReportsSharedResourcesRequest.prototype['OwnerUUID'] = undefined;
+
+/**
+ * @member {Number} ReportDate
+ */
+ReportsSharedResourcesRequest.prototype['ReportDate'] = undefined;
 
 /**
  * @member {Boolean} RolesReadAND

@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import ReportsListReportsResponse from '../model/ReportsListReportsResponse';
 import ReportsSharedResourcesRequest from '../model/ReportsSharedResourcesRequest';
 import ReportsSharedResourcesResponse from '../model/ReportsSharedResourcesResponse';
 import RpcStatus from '../model/RpcStatus';
@@ -35,6 +36,45 @@ export default class AuditDataServiceApi {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+
+    /**
+     * [Enterprise Only] Audit all shares across the application
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ReportsListReportsResponse} and HTTP response
+     */
+    listReportsWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = ReportsListReportsResponse;
+      return this.apiClient.callApi(
+        '/audit/data/reports', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * [Enterprise Only] Audit all shares across the application
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ReportsListReportsResponse}
+     */
+    listReports() {
+      return this.listReportsWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
 
 
     /**

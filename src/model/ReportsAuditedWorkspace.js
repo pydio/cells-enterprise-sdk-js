@@ -53,6 +53,9 @@ class ReportsAuditedWorkspace {
             if (data.hasOwnProperty('BrokenLink')) {
                 obj['BrokenLink'] = ApiClient.convertToType(data['BrokenLink'], 'Boolean');
             }
+            if (data.hasOwnProperty('BrokenWorkspace')) {
+                obj['BrokenWorkspace'] = ApiClient.convertToType(data['BrokenWorkspace'], 'Boolean');
+            }
             if (data.hasOwnProperty('OwnerUser')) {
                 obj['OwnerUser'] = IdmUser.constructFromObject(data['OwnerUser']);
             }
@@ -82,6 +85,11 @@ class ReportsAuditedWorkspace {
  * @member {Boolean} BrokenLink
  */
 ReportsAuditedWorkspace.prototype['BrokenLink'] = undefined;
+
+/**
+ * @member {Boolean} BrokenWorkspace
+ */
+ReportsAuditedWorkspace.prototype['BrokenWorkspace'] = undefined;
 
 /**
  * @member {module:model/IdmUser} OwnerUser
