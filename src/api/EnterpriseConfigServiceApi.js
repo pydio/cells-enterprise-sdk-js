@@ -18,7 +18,10 @@ import EntDeleteVersioningPolicyResponse from '../model/EntDeleteVersioningPolic
 import EntDeleteVirtualNodeResponse from '../model/EntDeleteVirtualNodeResponse';
 import EntExternalDirectoryCollection from '../model/EntExternalDirectoryCollection';
 import EntExternalDirectoryConfig from '../model/EntExternalDirectoryConfig';
+import EntExternalDirectoryPingRequest from '../model/EntExternalDirectoryPingRequest';
 import EntExternalDirectoryResponse from '../model/EntExternalDirectoryResponse';
+import EntExternalDirectorySearchRequest from '../model/EntExternalDirectorySearchRequest';
+import EntExternalDirectoryTestResponse from '../model/EntExternalDirectoryTestResponse';
 import EntListSitesResponse from '../model/EntListSitesResponse';
 import EntOAuth2ClientCollection from '../model/EntOAuth2ClientCollection';
 import EntOAuth2ClientResponse from '../model/EntOAuth2ClientResponse';
@@ -922,6 +925,51 @@ export default class EnterpriseConfigServiceApi {
 
 
     /**
+     * [Enterprise Only] Sends an arbitrary config and try to ping the server and bind
+     * @param {module:model/EntExternalDirectoryPingRequest} body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntExternalDirectoryTestResponse} and HTTP response
+     */
+    pingExternalDirectoryWithHttpInfo(body) {
+      let postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling pingExternalDirectory");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EntExternalDirectoryTestResponse;
+      return this.apiClient.callApi(
+        '/config/directories-test/ping', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * [Enterprise Only] Sends an arbitrary config and try to ping the server and bind
+     * @param {module:model/EntExternalDirectoryPingRequest} body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntExternalDirectoryTestResponse}
+     */
+    pingExternalDirectory(body) {
+      return this.pingExternalDirectoryWithHttpInfo(body)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * [Enterprise Only] Add/Create an external directory
      * @param {String} configId Id of the external directory
      * @param {module:model/EntExternalDirectoryConfig} body 
@@ -1220,6 +1268,51 @@ export default class EnterpriseConfigServiceApi {
      */
     putVirtualNode(uuid, body) {
       return this.putVirtualNodeWithHttpInfo(uuid, body)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * [Enterprise Only] Sends an arbitrary config and try to ldapsearch using a given SearchFilter
+     * @param {module:model/EntExternalDirectorySearchRequest} body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntExternalDirectoryTestResponse} and HTTP response
+     */
+    searchExternalDirectoryWithHttpInfo(body) {
+      let postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling searchExternalDirectory");
+      }
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EntExternalDirectoryTestResponse;
+      return this.apiClient.callApi(
+        '/config/directories-test/search', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * [Enterprise Only] Sends an arbitrary config and try to ldapsearch using a given SearchFilter
+     * @param {module:model/EntExternalDirectorySearchRequest} body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntExternalDirectoryTestResponse}
+     */
+    searchExternalDirectory(body) {
+      return this.searchExternalDirectoryWithHttpInfo(body)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -56,7 +56,10 @@ import EntDocTemplatePiece from './model/EntDocTemplatePiece';
 import EntDocTemplatesResponse from './model/EntDocTemplatesResponse';
 import EntExternalDirectoryCollection from './model/EntExternalDirectoryCollection';
 import EntExternalDirectoryConfig from './model/EntExternalDirectoryConfig';
+import EntExternalDirectoryPingRequest from './model/EntExternalDirectoryPingRequest';
 import EntExternalDirectoryResponse from './model/EntExternalDirectoryResponse';
+import EntExternalDirectorySearchRequest from './model/EntExternalDirectorySearchRequest';
+import EntExternalDirectoryTestResponse from './model/EntExternalDirectoryTestResponse';
 import EntFrontLoginConnectorsResponse from './model/EntFrontLoginConnectorsResponse';
 import EntListAccessTokensRequest from './model/EntListAccessTokensRequest';
 import EntListActionTemplatesRequest from './model/EntListActionTemplatesRequest';
@@ -478,10 +481,28 @@ export {
     EntExternalDirectoryConfig,
 
     /**
+     * The EntExternalDirectoryPingRequest model constructor.
+     * @property {module:model/EntExternalDirectoryPingRequest}
+     */
+    EntExternalDirectoryPingRequest,
+
+    /**
      * The EntExternalDirectoryResponse model constructor.
      * @property {module:model/EntExternalDirectoryResponse}
      */
     EntExternalDirectoryResponse,
+
+    /**
+     * The EntExternalDirectorySearchRequest model constructor.
+     * @property {module:model/EntExternalDirectorySearchRequest}
+     */
+    EntExternalDirectorySearchRequest,
+
+    /**
+     * The EntExternalDirectoryTestResponse model constructor.
+     * @property {module:model/EntExternalDirectoryTestResponse}
+     */
+    EntExternalDirectoryTestResponse,
 
     /**
      * The EntFrontLoginConnectorsResponse model constructor.
