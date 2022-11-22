@@ -47,6 +47,7 @@ import EntCreateNodeTemplateRequest from './model/EntCreateNodeTemplateRequest';
 import EntCreateNodeTemplateResponse from './model/EntCreateNodeTemplateResponse';
 import EntDeleteActionTemplateResponse from './model/EntDeleteActionTemplateResponse';
 import EntDeleteJobTemplateResponse from './model/EntDeleteJobTemplateResponse';
+import EntDeleteJobVersionResponse from './model/EntDeleteJobVersionResponse';
 import EntDeleteMetaTemplateResponse from './model/EntDeleteMetaTemplateResponse';
 import EntDeleteNodeTemplateResponse from './model/EntDeleteNodeTemplateResponse';
 import EntDeleteSelectorTemplateResponse from './model/EntDeleteSelectorTemplateResponse';
@@ -61,11 +62,14 @@ import EntExternalDirectoryResponse from './model/EntExternalDirectoryResponse';
 import EntExternalDirectorySearchRequest from './model/EntExternalDirectorySearchRequest';
 import EntExternalDirectoryTestResponse from './model/EntExternalDirectoryTestResponse';
 import EntFrontLoginConnectorsResponse from './model/EntFrontLoginConnectorsResponse';
+import EntJobHookResponse from './model/EntJobHookResponse';
+import EntJobVersion from './model/EntJobVersion';
 import EntListAccessTokensRequest from './model/EntListAccessTokensRequest';
 import EntListActionTemplatesRequest from './model/EntListActionTemplatesRequest';
 import EntListActionTemplatesResponse from './model/EntListActionTemplatesResponse';
 import EntListJobTemplatesRequest from './model/EntListJobTemplatesRequest';
 import EntListJobTemplatesResponse from './model/EntListJobTemplatesResponse';
+import EntListJobVersionsResponse from './model/EntListJobVersionsResponse';
 import EntListMetaTemplateResponse from './model/EntListMetaTemplateResponse';
 import EntListSelectorTemplatesRequest from './model/EntListSelectorTemplatesRequest';
 import EntListSelectorTemplatesResponse from './model/EntListSelectorTemplatesResponse';
@@ -87,6 +91,7 @@ import EntPutMetaTemplateRequest from './model/EntPutMetaTemplateRequest';
 import EntPutMetaTemplateResponse from './model/EntPutMetaTemplateResponse';
 import EntPutSelectorTemplateRequest from './model/EntPutSelectorTemplateRequest';
 import EntPutSelectorTemplateResponse from './model/EntPutSelectorTemplateResponse';
+import EntRestoreJobVersionResponse from './model/EntRestoreJobVersionResponse';
 import EntSelectorTemplate from './model/EntSelectorTemplate';
 import IdmACL from './model/IdmACL';
 import IdmACLAction from './model/IdmACLAction';
@@ -103,6 +108,9 @@ import InlineObject from './model/InlineObject';
 import InlineObject1 from './model/InlineObject1';
 import InlineObject2 from './model/InlineObject2';
 import InlineObject3 from './model/InlineObject3';
+import InlineObject4 from './model/InlineObject4';
+import InlineObject5 from './model/InlineObject5';
+import InlineObject6 from './model/InlineObject6';
 import InstallProxyConfig from './model/InstallProxyConfig';
 import InstallTLSCertificate from './model/InstallTLSCertificate';
 import InstallTLSLetsEncrypt from './model/InstallTLSLetsEncrypt';
@@ -126,6 +134,7 @@ import JobsDeleteJobResponse from './model/JobsDeleteJobResponse';
 import JobsIdmSelector from './model/JobsIdmSelector';
 import JobsIdmSelectorType from './model/JobsIdmSelectorType';
 import JobsJob from './model/JobsJob';
+import JobsJobHook from './model/JobsJobHook';
 import JobsJobParameter from './model/JobsJobParameter';
 import JobsNodesSelector from './model/JobsNodesSelector';
 import JobsPutJobRequest from './model/JobsPutJobRequest';
@@ -427,6 +436,12 @@ export {
     EntDeleteJobTemplateResponse,
 
     /**
+     * The EntDeleteJobVersionResponse model constructor.
+     * @property {module:model/EntDeleteJobVersionResponse}
+     */
+    EntDeleteJobVersionResponse,
+
+    /**
      * The EntDeleteMetaTemplateResponse model constructor.
      * @property {module:model/EntDeleteMetaTemplateResponse}
      */
@@ -511,6 +526,18 @@ export {
     EntFrontLoginConnectorsResponse,
 
     /**
+     * The EntJobHookResponse model constructor.
+     * @property {module:model/EntJobHookResponse}
+     */
+    EntJobHookResponse,
+
+    /**
+     * The EntJobVersion model constructor.
+     * @property {module:model/EntJobVersion}
+     */
+    EntJobVersion,
+
+    /**
      * The EntListAccessTokensRequest model constructor.
      * @property {module:model/EntListAccessTokensRequest}
      */
@@ -539,6 +566,12 @@ export {
      * @property {module:model/EntListJobTemplatesResponse}
      */
     EntListJobTemplatesResponse,
+
+    /**
+     * The EntListJobVersionsResponse model constructor.
+     * @property {module:model/EntListJobVersionsResponse}
+     */
+    EntListJobVersionsResponse,
 
     /**
      * The EntListMetaTemplateResponse model constructor.
@@ -667,6 +700,12 @@ export {
     EntPutSelectorTemplateResponse,
 
     /**
+     * The EntRestoreJobVersionResponse model constructor.
+     * @property {module:model/EntRestoreJobVersionResponse}
+     */
+    EntRestoreJobVersionResponse,
+
+    /**
      * The EntSelectorTemplate model constructor.
      * @property {module:model/EntSelectorTemplate}
      */
@@ -761,6 +800,24 @@ export {
      * @property {module:model/InlineObject3}
      */
     InlineObject3,
+
+    /**
+     * The InlineObject4 model constructor.
+     * @property {module:model/InlineObject4}
+     */
+    InlineObject4,
+
+    /**
+     * The InlineObject5 model constructor.
+     * @property {module:model/InlineObject5}
+     */
+    InlineObject5,
+
+    /**
+     * The InlineObject6 model constructor.
+     * @property {module:model/InlineObject6}
+     */
+    InlineObject6,
 
     /**
      * The InstallProxyConfig model constructor.
@@ -899,6 +956,12 @@ export {
      * @property {module:model/JobsJob}
      */
     JobsJob,
+
+    /**
+     * The JobsJobHook model constructor.
+     * @property {module:model/JobsJobHook}
+     */
+    JobsJobHook,
 
     /**
      * The JobsJobParameter model constructor.

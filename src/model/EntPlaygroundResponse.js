@@ -51,6 +51,9 @@ class EntPlaygroundResponse {
             if (data.hasOwnProperty('Code')) {
                 obj['Code'] = ApiClient.convertToType(data['Code'], 'String');
             }
+            if (data.hasOwnProperty('CodeMime')) {
+                obj['CodeMime'] = ApiClient.convertToType(data['CodeMime'], 'String');
+            }
             if (data.hasOwnProperty('Input')) {
                 obj['Input'] = JobsActionMessage.constructFromObject(data['Input']);
             }
@@ -71,6 +74,11 @@ class EntPlaygroundResponse {
  * @member {String} Code
  */
 EntPlaygroundResponse.prototype['Code'] = undefined;
+
+/**
+ * @member {String} CodeMime
+ */
+EntPlaygroundResponse.prototype['CodeMime'] = undefined;
 
 /**
  * @member {module:model/JobsActionMessage} Input

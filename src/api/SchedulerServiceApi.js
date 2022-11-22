@@ -15,12 +15,15 @@
 import ApiClient from "../ApiClient";
 import EntDeleteActionTemplateResponse from '../model/EntDeleteActionTemplateResponse';
 import EntDeleteJobTemplateResponse from '../model/EntDeleteJobTemplateResponse';
+import EntDeleteJobVersionResponse from '../model/EntDeleteJobVersionResponse';
 import EntDeleteSelectorTemplateResponse from '../model/EntDeleteSelectorTemplateResponse';
 import EntDocTemplatesResponse from '../model/EntDocTemplatesResponse';
+import EntJobHookResponse from '../model/EntJobHookResponse';
 import EntListActionTemplatesRequest from '../model/EntListActionTemplatesRequest';
 import EntListActionTemplatesResponse from '../model/EntListActionTemplatesResponse';
 import EntListJobTemplatesRequest from '../model/EntListJobTemplatesRequest';
 import EntListJobTemplatesResponse from '../model/EntListJobTemplatesResponse';
+import EntListJobVersionsResponse from '../model/EntListJobVersionsResponse';
 import EntListSelectorTemplatesRequest from '../model/EntListSelectorTemplatesRequest';
 import EntListSelectorTemplatesResponse from '../model/EntListSelectorTemplatesResponse';
 import EntPlaygroundRequest from '../model/EntPlaygroundRequest';
@@ -31,6 +34,10 @@ import EntPutJobTemplateRequest from '../model/EntPutJobTemplateRequest';
 import EntPutJobTemplateResponse from '../model/EntPutJobTemplateResponse';
 import EntPutSelectorTemplateRequest from '../model/EntPutSelectorTemplateRequest';
 import EntPutSelectorTemplateResponse from '../model/EntPutSelectorTemplateResponse';
+import EntRestoreJobVersionResponse from '../model/EntRestoreJobVersionResponse';
+import InlineObject4 from '../model/InlineObject4';
+import InlineObject5 from '../model/InlineObject5';
+import InlineObject6 from '../model/InlineObject6';
 import JobsDeleteJobResponse from '../model/JobsDeleteJobResponse';
 import JobsPutJobRequest from '../model/JobsPutJobRequest';
 import JobsPutJobResponse from '../model/JobsPutJobResponse';
@@ -194,6 +201,63 @@ export default class SchedulerServiceApi {
      */
     deleteJobTemplate(name) {
       return this.deleteJobTemplateWithHttpInfo(name)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {String} jobID 
+     * @param {String} versionID 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.type 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntDeleteJobVersionResponse} and HTTP response
+     */
+    deleteJobVersionWithHttpInfo(jobID, versionID, opts) {
+      opts = opts || {};
+      let postBody = null;
+      // verify the required parameter 'jobID' is set
+      if (jobID === undefined || jobID === null) {
+        throw new Error("Missing the required parameter 'jobID' when calling deleteJobVersion");
+      }
+      // verify the required parameter 'versionID' is set
+      if (versionID === undefined || versionID === null) {
+        throw new Error("Missing the required parameter 'versionID' when calling deleteJobVersion");
+      }
+
+      let pathParams = {
+        'JobID': jobID,
+        'VersionID': versionID
+      };
+      let queryParams = {
+        'Type': opts['type']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = EntDeleteJobVersionResponse;
+      return this.apiClient.callApi(
+        '/scheduler/versions/{JobID}/{VersionID}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * @param {String} jobID 
+     * @param {String} versionID 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.type 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntDeleteJobVersionResponse}
+     */
+    deleteJobVersion(jobID, versionID, opts) {
+      return this.deleteJobVersionWithHttpInfo(jobID, versionID, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -426,6 +490,56 @@ export default class SchedulerServiceApi {
 
 
     /**
+     * @param {String} jobID 
+     * @param {module:model/InlineObject5} body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntListJobVersionsResponse} and HTTP response
+     */
+    listJobVersionsWithHttpInfo(jobID, body) {
+      let postBody = body;
+      // verify the required parameter 'jobID' is set
+      if (jobID === undefined || jobID === null) {
+        throw new Error("Missing the required parameter 'jobID' when calling listJobVersions");
+      }
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling listJobVersions");
+      }
+
+      let pathParams = {
+        'JobID': jobID
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EntListJobVersionsResponse;
+      return this.apiClient.callApi(
+        '/scheduler/versions/{JobID}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * @param {String} jobID 
+     * @param {module:model/InlineObject5} body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntListJobVersionsResponse}
+     */
+    listJobVersions(jobID, body) {
+      return this.listJobVersionsWithHttpInfo(jobID, body)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Templates management for filters
      * @param {module:model/EntListSelectorTemplatesRequest} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntListSelectorTemplatesResponse} and HTTP response
@@ -651,6 +765,113 @@ export default class SchedulerServiceApi {
      */
     putSelectorTemplate(body) {
       return this.putSelectorTemplateWithHttpInfo(body)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {String} jobID 
+     * @param {String} versionID 
+     * @param {module:model/InlineObject6} body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntRestoreJobVersionResponse} and HTTP response
+     */
+    restoreJobVersionWithHttpInfo(jobID, versionID, body) {
+      let postBody = body;
+      // verify the required parameter 'jobID' is set
+      if (jobID === undefined || jobID === null) {
+        throw new Error("Missing the required parameter 'jobID' when calling restoreJobVersion");
+      }
+      // verify the required parameter 'versionID' is set
+      if (versionID === undefined || versionID === null) {
+        throw new Error("Missing the required parameter 'versionID' when calling restoreJobVersion");
+      }
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling restoreJobVersion");
+      }
+
+      let pathParams = {
+        'JobID': jobID,
+        'VersionID': versionID
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EntRestoreJobVersionResponse;
+      return this.apiClient.callApi(
+        '/scheduler/versions/{JobID}/{VersionID}', 'PATCH',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * @param {String} jobID 
+     * @param {String} versionID 
+     * @param {module:model/InlineObject6} body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntRestoreJobVersionResponse}
+     */
+    restoreJobVersion(jobID, versionID, body) {
+      return this.restoreJobVersionWithHttpInfo(jobID, versionID, body)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * @param {String} hookSlug 
+     * @param {module:model/InlineObject4} body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntJobHookResponse} and HTTP response
+     */
+    triggerHookWithHttpInfo(hookSlug, body) {
+      let postBody = body;
+      // verify the required parameter 'hookSlug' is set
+      if (hookSlug === undefined || hookSlug === null) {
+        throw new Error("Missing the required parameter 'hookSlug' when calling triggerHook");
+      }
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling triggerHook");
+      }
+
+      let pathParams = {
+        'HookSlug': hookSlug
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = EntJobHookResponse;
+      return this.apiClient.callApi(
+        '/scheduler/hooks/{HookSlug}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * @param {String} hookSlug 
+     * @param {module:model/InlineObject4} body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntJobHookResponse}
+     */
+    triggerHook(hookSlug, body) {
+      return this.triggerHookWithHttpInfo(hookSlug, body)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
