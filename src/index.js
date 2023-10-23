@@ -128,6 +128,7 @@ import JobsActionOutput from './model/JobsActionOutput';
 import JobsActionOutputFilter from './model/JobsActionOutputFilter';
 import JobsContextMetaFilter from './model/JobsContextMetaFilter';
 import JobsContextMetaFilterType from './model/JobsContextMetaFilterType';
+import JobsDataSelector from './model/JobsDataSelector';
 import JobsDataSourceSelector from './model/JobsDataSourceSelector';
 import JobsDataSourceSelectorType from './model/JobsDataSourceSelectorType';
 import JobsDeleteJobResponse from './model/JobsDeleteJobResponse';
@@ -920,6 +921,12 @@ export {
      * @property {module:model/JobsContextMetaFilterType}
      */
     JobsContextMetaFilterType,
+
+    /**
+     * The JobsDataSelector model constructor.
+     * @property {module:model/JobsDataSelector}
+     */
+    JobsDataSelector,
 
     /**
      * The JobsDataSourceSelector model constructor.

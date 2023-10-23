@@ -68,7 +68,7 @@ export default class EnterpriseConfigServiceApi {
      * @param {Boolean} opts.configBindAnonymous 
      * @param {Boolean} opts.configSkipVerifyCertificate 
      * @param {String} opts.configRootCA 
-     * @param {String} opts.configRootCAData To be converted to []byte.
+     * @param {String} opts.configRootCAData To be converted to []byte
      * @param {Number} opts.configPageSize 
      * @param {Array.<String>} opts.configUserDNs 
      * @param {String} opts.configUserFilter 
@@ -173,7 +173,7 @@ export default class EnterpriseConfigServiceApi {
      * @param {Boolean} opts.configBindAnonymous 
      * @param {Boolean} opts.configSkipVerifyCertificate 
      * @param {String} opts.configRootCA 
-     * @param {String} opts.configRootCAData To be converted to []byte.
+     * @param {String} opts.configRootCAData To be converted to []byte
      * @param {Number} opts.configPageSize 
      * @param {Array.<String>} opts.configUserDNs 
      * @param {String} opts.configUserFilter 
@@ -318,7 +318,7 @@ export default class EnterpriseConfigServiceApi {
      * @param {Boolean} opts.configgithubLoadAllGroups 
      * @param {String} opts.configgithubTeamNameField 
      * @param {Boolean} opts.configgithubUseLoginAsID 
-     * @param {String} opts.configgithubHostName For GitHub enterprise.
+     * @param {String} opts.configgithubHostName For GitHub enterprise
      * @param {String} opts.configgithubRootCA 
      * @param {String} opts.configgitlabBaseURL 
      * @param {String} opts.configgitlabClientID 
@@ -346,7 +346,7 @@ export default class EnterpriseConfigServiceApi {
      * @param {Boolean} opts.configldapBindAnonymous 
      * @param {Boolean} opts.configldapSkipVerifyCertificate 
      * @param {String} opts.configldapRootCA 
-     * @param {String} opts.configldapRootCAData To be converted to []byte.
+     * @param {String} opts.configldapRootCAData To be converted to []byte
      * @param {Number} opts.configldapPageSize 
      * @param {Array.<String>} opts.configldapUserDNs 
      * @param {String} opts.configldapUserFilter 
@@ -553,7 +553,7 @@ export default class EnterpriseConfigServiceApi {
      * @param {Boolean} opts.configgithubLoadAllGroups 
      * @param {String} opts.configgithubTeamNameField 
      * @param {Boolean} opts.configgithubUseLoginAsID 
-     * @param {String} opts.configgithubHostName For GitHub enterprise.
+     * @param {String} opts.configgithubHostName For GitHub enterprise
      * @param {String} opts.configgithubRootCA 
      * @param {String} opts.configgitlabBaseURL 
      * @param {String} opts.configgitlabClientID 
@@ -581,7 +581,7 @@ export default class EnterpriseConfigServiceApi {
      * @param {Boolean} opts.configldapBindAnonymous 
      * @param {Boolean} opts.configldapSkipVerifyCertificate 
      * @param {String} opts.configldapRootCA 
-     * @param {String} opts.configldapRootCAData To be converted to []byte.
+     * @param {String} opts.configldapRootCAData To be converted to []byte
      * @param {Number} opts.configldapPageSize 
      * @param {Array.<String>} opts.configldapUserDNs 
      * @param {String} opts.configldapUserFilter 
@@ -707,10 +707,10 @@ export default class EnterpriseConfigServiceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.path 
      * @param {module:model/String} opts.type  (default to 'UNKNOWN')
-     * @param {String} opts.size Size of the file, or cumulated size of folder.
-     * @param {String} opts.mTime Last modification Timestamp.
-     * @param {Number} opts.mode Permission mode, like 0777.
-     * @param {String} opts.etag Hash of the content if node is a LEAF, Uuid or.
+     * @param {String} opts.size Size of the file, or cumulated size of folder
+     * @param {String} opts.mTime Last modification Timestamp
+     * @param {Number} opts.mode Permission mode, like 0777
+     * @param {String} opts.etag Hash of the content if node is a LEAF, Uuid or
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntDeleteVirtualNodeResponse} and HTTP response
      */
     deleteVirtualNodeWithHttpInfo(uuid, opts) {
@@ -754,10 +754,10 @@ export default class EnterpriseConfigServiceApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.path 
      * @param {module:model/String} opts.type  (default to 'UNKNOWN')
-     * @param {String} opts.size Size of the file, or cumulated size of folder.
-     * @param {String} opts.mTime Last modification Timestamp.
-     * @param {Number} opts.mode Permission mode, like 0777.
-     * @param {String} opts.etag Hash of the content if node is a LEAF, Uuid or.
+     * @param {String} opts.size Size of the file, or cumulated size of folder
+     * @param {String} opts.mTime Last modification Timestamp
+     * @param {Number} opts.mode Permission mode, like 0777
+     * @param {String} opts.etag Hash of the content if node is a LEAF, Uuid or
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntDeleteVirtualNodeResponse}
      */
     deleteVirtualNode(uuid, opts) {

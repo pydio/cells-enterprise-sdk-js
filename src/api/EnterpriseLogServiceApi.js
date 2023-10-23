@@ -41,7 +41,7 @@ export default class EnterpriseLogServiceApi {
 
     /**
      * [Enterprise Only] Auditable Logs, in Json or CSV format
-     * @param {module:model/LogListLogRequest} body 
+     * @param {module:model/LogListLogRequest} body ListLogRequest launches a parameterised query in the log repository and streams the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RestLogMessageCollection} and HTTP response
      */
     auditWithHttpInfo(body) {
@@ -73,7 +73,7 @@ export default class EnterpriseLogServiceApi {
 
     /**
      * [Enterprise Only] Auditable Logs, in Json or CSV format
-     * @param {module:model/LogListLogRequest} body 
+     * @param {module:model/LogListLogRequest} body ListLogRequest launches a parameterised query in the log repository and streams the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RestLogMessageCollection}
      */
     audit(body) {
@@ -86,7 +86,7 @@ export default class EnterpriseLogServiceApi {
 
     /**
      * [Enterprise Only] Retrieves aggregated audit logs to generate charts
-     * @param {module:model/LogTimeRangeRequest} body 
+     * @param {module:model/LogTimeRangeRequest} body TimeRangeRequest contains the parameter to configure the query to  retrieve the number of audit events of this type for a given time range defined by last timestamp and a range type.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RestTimeRangeResultCollection} and HTTP response
      */
     auditChartDataWithHttpInfo(body) {
@@ -118,7 +118,7 @@ export default class EnterpriseLogServiceApi {
 
     /**
      * [Enterprise Only] Retrieves aggregated audit logs to generate charts
-     * @param {module:model/LogTimeRangeRequest} body 
+     * @param {module:model/LogTimeRangeRequest} body TimeRangeRequest contains the parameter to configure the query to  retrieve the number of audit events of this type for a given time range defined by last timestamp and a range type.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RestTimeRangeResultCollection}
      */
     auditChartData(body) {
@@ -131,7 +131,7 @@ export default class EnterpriseLogServiceApi {
 
     /**
      * [Enterprise Only] Auditable Logs, in Json or CSV format
-     * @param {module:model/LogListLogRequest} body 
+     * @param {module:model/LogListLogRequest} body ListLogRequest launches a parameterised query in the log repository and streams the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RestLogMessageCollection} and HTTP response
      */
     auditExportWithHttpInfo(body) {
@@ -163,7 +163,7 @@ export default class EnterpriseLogServiceApi {
 
     /**
      * [Enterprise Only] Auditable Logs, in Json or CSV format
-     * @param {module:model/LogListLogRequest} body 
+     * @param {module:model/LogListLogRequest} body ListLogRequest launches a parameterised query in the log repository and streams the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RestLogMessageCollection}
      */
     auditExport(body) {
@@ -176,7 +176,7 @@ export default class EnterpriseLogServiceApi {
 
     /**
      * [Enterprise Only] Technical Logs, in Json or CSV format
-     * @param {module:model/LogListLogRequest} body 
+     * @param {module:model/LogListLogRequest} body ListLogRequest launches a parameterised query in the log repository and streams the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RestLogMessageCollection} and HTTP response
      */
     syslogExportWithHttpInfo(body) {
@@ -208,7 +208,7 @@ export default class EnterpriseLogServiceApi {
 
     /**
      * [Enterprise Only] Technical Logs, in Json or CSV format
-     * @param {module:model/LogListLogRequest} body 
+     * @param {module:model/LogListLogRequest} body ListLogRequest launches a parameterised query in the log repository and streams the results.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RestLogMessageCollection}
      */
     syslogExport(body) {

@@ -12,22 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import JobsDataSourceSelectorType from './JobsDataSourceSelectorType';
 import ServiceQuery from './ServiceQuery';
 
 /**
- * The JobsDataSourceSelector model module.
- * @module model/JobsDataSourceSelector
+ * The JobsDataSelector model module.
+ * @module model/JobsDataSelector
  * @version 2.0
  */
-class JobsDataSourceSelector {
+class JobsDataSelector {
     /**
-     * Constructs a new <code>JobsDataSourceSelector</code>.
-     * @alias module:model/JobsDataSourceSelector
+     * Constructs a new <code>JobsDataSelector</code>.
+     * @alias module:model/JobsDataSelector
      */
     constructor() { 
         
-        JobsDataSourceSelector.initialize(this);
+        JobsDataSelector.initialize(this);
     }
 
     /**
@@ -39,19 +38,16 @@ class JobsDataSourceSelector {
     }
 
     /**
-     * Constructs a <code>JobsDataSourceSelector</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>JobsDataSelector</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/JobsDataSourceSelector} obj Optional instance to populate.
-     * @return {module:model/JobsDataSourceSelector} The populated <code>JobsDataSourceSelector</code> instance.
+     * @param {module:model/JobsDataSelector} obj Optional instance to populate.
+     * @return {module:model/JobsDataSelector} The populated <code>JobsDataSelector</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new JobsDataSourceSelector();
+            obj = obj || new JobsDataSelector();
 
-            if (data.hasOwnProperty('All')) {
-                obj['All'] = ApiClient.convertToType(data['All'], 'Boolean');
-            }
             if (data.hasOwnProperty('ClearInput')) {
                 obj['ClearInput'] = ApiClient.convertToType(data['ClearInput'], 'Boolean');
             }
@@ -73,9 +69,6 @@ class JobsDataSourceSelector {
             if (data.hasOwnProperty('Timeout')) {
                 obj['Timeout'] = ApiClient.convertToType(data['Timeout'], 'String');
             }
-            if (data.hasOwnProperty('Type')) {
-                obj['Type'] = JobsDataSourceSelectorType.constructFromObject(data['Type']);
-            }
         }
         return obj;
     }
@@ -84,54 +77,44 @@ class JobsDataSourceSelector {
 }
 
 /**
- * @member {Boolean} All
- */
-JobsDataSourceSelector.prototype['All'] = undefined;
-
-/**
  * @member {Boolean} ClearInput
  */
-JobsDataSourceSelector.prototype['ClearInput'] = undefined;
+JobsDataSelector.prototype['ClearInput'] = undefined;
 
 /**
  * @member {Boolean} Collect
  */
-JobsDataSourceSelector.prototype['Collect'] = undefined;
+JobsDataSelector.prototype['Collect'] = undefined;
 
 /**
  * @member {String} Description
  */
-JobsDataSourceSelector.prototype['Description'] = undefined;
+JobsDataSelector.prototype['Description'] = undefined;
 
 /**
  * @member {Boolean} FanOutInput
  */
-JobsDataSourceSelector.prototype['FanOutInput'] = undefined;
+JobsDataSelector.prototype['FanOutInput'] = undefined;
 
 /**
  * @member {String} Label
  */
-JobsDataSourceSelector.prototype['Label'] = undefined;
+JobsDataSelector.prototype['Label'] = undefined;
 
 /**
  * @member {module:model/ServiceQuery} Query
  */
-JobsDataSourceSelector.prototype['Query'] = undefined;
+JobsDataSelector.prototype['Query'] = undefined;
 
 /**
  * @member {String} Timeout
  */
-JobsDataSourceSelector.prototype['Timeout'] = undefined;
-
-/**
- * @member {module:model/JobsDataSourceSelectorType} Type
- */
-JobsDataSourceSelector.prototype['Type'] = undefined;
+JobsDataSelector.prototype['Timeout'] = undefined;
 
 
 
 
 
 
-export default JobsDataSourceSelector;
+export default JobsDataSelector;
 
