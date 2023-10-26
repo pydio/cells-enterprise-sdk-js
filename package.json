@@ -1,6 +1,6 @@
 {
   "name": "cells-enterprise-sdk",
-  "version": "4.3.1-dev",
+  "version": "4.3.1-rc1",
   "description": "Javascript SDK for Pydio Cells Enterprise",
   "main": "lib/index.js",
   "module": "src/index.js",
