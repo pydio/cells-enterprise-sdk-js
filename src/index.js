@@ -126,6 +126,7 @@ import JobsActionLog from './model/JobsActionLog';
 import JobsActionMessage from './model/JobsActionMessage';
 import JobsActionOutput from './model/JobsActionOutput';
 import JobsActionOutputFilter from './model/JobsActionOutputFilter';
+import JobsChatEventFilter from './model/JobsChatEventFilter';
 import JobsContextMetaFilter from './model/JobsContextMetaFilter';
 import JobsContextMetaFilterType from './model/JobsContextMetaFilterType';
 import JobsDataSelector from './model/JobsDataSelector';
@@ -909,6 +910,12 @@ export {
      * @property {module:model/JobsActionOutputFilter}
      */
     JobsActionOutputFilter,
+
+    /**
+     * The JobsChatEventFilter model constructor.
+     * @property {module:model/JobsChatEventFilter}
+     */
+    JobsChatEventFilter,
 
     /**
      * The JobsContextMetaFilter model constructor.
