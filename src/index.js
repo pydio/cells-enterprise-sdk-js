@@ -28,6 +28,7 @@ import AuthOAuth2ConnectorGithubConfigOrg from './model/AuthOAuth2ConnectorGithu
 import AuthOAuth2ConnectorGitlabConfig from './model/AuthOAuth2ConnectorGitlabConfig';
 import AuthOAuth2ConnectorLinkedinConfig from './model/AuthOAuth2ConnectorLinkedinConfig';
 import AuthOAuth2ConnectorMicrosoftConfig from './model/AuthOAuth2ConnectorMicrosoftConfig';
+import AuthOAuth2ConnectorMockConfig from './model/AuthOAuth2ConnectorMockConfig';
 import AuthOAuth2ConnectorOAuthConfig from './model/AuthOAuth2ConnectorOAuthConfig';
 import AuthOAuth2ConnectorOIDCConfig from './model/AuthOAuth2ConnectorOIDCConfig';
 import AuthOAuth2ConnectorPydioConfig from './model/AuthOAuth2ConnectorPydioConfig';
@@ -142,6 +143,7 @@ import JobsNodesSelector from './model/JobsNodesSelector';
 import JobsPutJobRequest from './model/JobsPutJobRequest';
 import JobsPutJobResponse from './model/JobsPutJobResponse';
 import JobsSchedule from './model/JobsSchedule';
+import JobsSelectorRange from './model/JobsSelectorRange';
 import JobsTask from './model/JobsTask';
 import JobsTaskStatus from './model/JobsTaskStatus';
 import JobsTriggerFilter from './model/JobsTriggerFilter';
@@ -322,6 +324,12 @@ export {
      * @property {module:model/AuthOAuth2ConnectorMicrosoftConfig}
      */
     AuthOAuth2ConnectorMicrosoftConfig,
+
+    /**
+     * The AuthOAuth2ConnectorMockConfig model constructor.
+     * @property {module:model/AuthOAuth2ConnectorMockConfig}
+     */
+    AuthOAuth2ConnectorMockConfig,
 
     /**
      * The AuthOAuth2ConnectorOAuthConfig model constructor.
@@ -1006,6 +1014,12 @@ export {
      * @property {module:model/JobsSchedule}
      */
     JobsSchedule,
+
+    /**
+     * The JobsSelectorRange model constructor.
+     * @property {module:model/JobsSelectorRange}
+     */
+    JobsSelectorRange,
 
     /**
      * The JobsTask model constructor.

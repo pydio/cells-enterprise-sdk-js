@@ -18,6 +18,7 @@ import AuthOAuth2ConnectorGithubConfig from './AuthOAuth2ConnectorGithubConfig';
 import AuthOAuth2ConnectorGitlabConfig from './AuthOAuth2ConnectorGitlabConfig';
 import AuthOAuth2ConnectorLinkedinConfig from './AuthOAuth2ConnectorLinkedinConfig';
 import AuthOAuth2ConnectorMicrosoftConfig from './AuthOAuth2ConnectorMicrosoftConfig';
+import AuthOAuth2ConnectorMockConfig from './AuthOAuth2ConnectorMockConfig';
 import AuthOAuth2ConnectorOAuthConfig from './AuthOAuth2ConnectorOAuthConfig';
 import AuthOAuth2ConnectorOIDCConfig from './AuthOAuth2ConnectorOIDCConfig';
 import AuthOAuth2ConnectorPydioConfig from './AuthOAuth2ConnectorPydioConfig';
@@ -75,6 +76,9 @@ class AuthOAuth2ConnectorConfig {
             }
             if (data.hasOwnProperty('configmicrosoft')) {
                 obj['configmicrosoft'] = AuthOAuth2ConnectorMicrosoftConfig.constructFromObject(data['configmicrosoft']);
+            }
+            if (data.hasOwnProperty('configmock')) {
+                obj['configmock'] = AuthOAuth2ConnectorMockConfig.constructFromObject(data['configmock']);
             }
             if (data.hasOwnProperty('configoauth')) {
                 obj['configoauth'] = AuthOAuth2ConnectorOAuthConfig.constructFromObject(data['configoauth']);
@@ -139,6 +143,11 @@ AuthOAuth2ConnectorConfig.prototype['configlinkedin'] = undefined;
  * @member {module:model/AuthOAuth2ConnectorMicrosoftConfig} configmicrosoft
  */
 AuthOAuth2ConnectorConfig.prototype['configmicrosoft'] = undefined;
+
+/**
+ * @member {module:model/AuthOAuth2ConnectorMockConfig} configmock
+ */
+AuthOAuth2ConnectorConfig.prototype['configmock'] = undefined;
 
 /**
  * @member {module:model/AuthOAuth2ConnectorOAuthConfig} configoauth

@@ -382,6 +382,7 @@ export default class EnterpriseConfigServiceApi {
      * @param {Array.<String>} opts.configoauthGroups 
      * @param {Boolean} opts.configoauthUseLoginAsID 
      * @param {Boolean} opts.configoauthUseBrokenAuthHeaderProvider 
+     * @param {String} opts.configmockJsonIdentity 
      * @param {Array.<String>} opts.sites 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EntOAuth2ConnectorResponse} and HTTP response
      */
@@ -496,6 +497,7 @@ export default class EnterpriseConfigServiceApi {
         'configoauth.groups': this.apiClient.buildCollectionParam(opts['configoauthGroups'], 'multi'),
         'configoauth.useLoginAsID': opts['configoauthUseLoginAsID'],
         'configoauth.useBrokenAuthHeaderProvider': opts['configoauthUseBrokenAuthHeaderProvider'],
+        'configmock.jsonIdentity': opts['configmockJsonIdentity'],
         'sites': this.apiClient.buildCollectionParam(opts['sites'], 'multi')
       };
       let headerParams = {
@@ -617,6 +619,7 @@ export default class EnterpriseConfigServiceApi {
      * @param {Array.<String>} opts.configoauthGroups 
      * @param {Boolean} opts.configoauthUseLoginAsID 
      * @param {Boolean} opts.configoauthUseBrokenAuthHeaderProvider 
+     * @param {String} opts.configmockJsonIdentity 
      * @param {Array.<String>} opts.sites 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EntOAuth2ConnectorResponse}
      */
